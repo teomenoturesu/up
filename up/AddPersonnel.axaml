@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="up.AddPersonnel"
+        Title="AddPersonnel"
+        Height="400" Width="320">
+        <Grid>
+                <StackPanel Margin="10">
+                        <Label Content="Name:"/>
+                        <TextBox x:Name="NameTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Label Content="Surname:"/>
+                        <TextBox x:Name="SurnameTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Label Content="Phone:"/>
+                        <TextBox x:Name="PhoneTextBox" Width="300" Margin="0,0,0,10"/>
+                        
+                        <Label Content="Login:"/>
+                        <TextBox x:Name="LoginTextBox" Width="300" Margin="0,0,0,10"/>
+                        
+                        <Label Content="Password:"/>
+                        <TextBox x:Name="PasswordTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Button Content="Add medical personnel" Click="Button_OnClick"/>
+                </StackPanel>
+        </Grid>
+</Window>

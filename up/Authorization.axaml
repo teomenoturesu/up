@@ -1,0 +1,26 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:up.Models"
+        Height="300" Width="300"
+        CanResize="False"
+        Background="White"
+        x:Class="up.Authorization"
+        Title="Authorization">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Authorization" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+        
+                <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Username:"/>
+                        <TextBox x:Name="UsernameTextBox"/>
+                </StackPanel>
+        
+                <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Password:"/>
+                        <TextBox x:Name="PasswordTextBox"/>
+                </StackPanel>
+        
+                <Button Content="Login" Click="Button_OnClick"/>  
+        </StackPanel>
+</Window>

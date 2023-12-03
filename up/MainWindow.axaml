@@ -1,0 +1,101 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:up.Models"
+        CanResize="False"
+        Background="White"
+        Width="684" Height="400"
+        x:Class="up.MainWindow"
+        Title="up">
+        <TabControl>
+                <TabItem Header="Appointments"  Foreground="Black" >
+                        <DataGrid x:Name="AppointmentDataGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  GridLinesVisibility="All"
+                                  BorderThickness="1"
+                                  BorderBrush="Gray"
+                                  x:DataType="models:Appointment"
+                                  Margin="0,-250,0,0"
+                                  Background="White"
+                                  MaxHeight="133">
+                                <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Doctor" Binding="{Binding Doctor.Name}"/>
+                                        <DataGridTextColumn Header="Disease" Binding="{Binding Disease.Name}"/>
+                                        <DataGridTextColumn Header="Payment" Binding="{Binding Payment.Amount}"/>
+                                        <DataGridCheckBoxColumn Header="Attendance" Width="Auto" Binding="{Binding Attendance}"/>
+                                        <DataGridTextColumn Header="Treatment" Binding="{Binding Treatment.Description}"/>
+                                        <DataGridTextColumn Header="MedicalCard" Binding="{Binding MedicalCard}"/>
+                                </DataGrid.Columns>
+                                
+                        </DataGrid>
+                </TabItem>
+                <TabItem Header="Patient" Foreground="Black">
+                        <Grid>
+                                <DataGrid x:Name="PatientDataGrid"
+                                        AutoGenerateColumns="False"
+                                        IsReadOnly="True"
+                                        GridLinesVisibility="All"
+                                        BorderThickness="1"
+                                        BorderBrush="Gray"
+                                        x:DataType="models:Patient"
+                                        Margin="0,-250,0,0"
+                                        Background="White"
+                                        MaxHeight="133">
+                                        <DataGrid.Columns>
+                                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                                                <DataGridTextColumn Header="DateOfBirth" Binding="{Binding DateOfBirth}"/>
+                                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                                        </DataGrid.Columns>
+                                </DataGrid>
+                                <Button Content="Add patient" Click="ButtonP_OnClick"/>
+                        </Grid>
+                </TabItem>
+                <TabItem Header="Personnel" HorizontalAlignment="Center" Foreground="Black">
+                        <Grid>
+                                <DataGrid x:Name="MedicalPersonnelDataGrid"
+                                          AutoGenerateColumns="False"
+                                          IsReadOnly="True"
+                                          GridLinesVisibility="All"
+                                          BorderThickness="1"
+                                          BorderBrush="Gray"
+                                          x:DataType="models:MedicalPersonnel"
+                                          Margin="0,-250,0,0"
+                                          Background="White"
+                                          MaxHeight="133">
+                                        <DataGrid.Columns>
+                                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                                        </DataGrid.Columns>
+                                </DataGrid>
+                                <Button Content="Add medical personnel" Click="ButtonM_OnClick"/>
+                        </Grid>
+                        
+                        
+                </TabItem>
+                <TabItem Header="Disease" HorizontalAlignment="Center" Foreground="Black">
+                        <DataGrid x:Name="DiseaseDataGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  GridLinesVisibility="All"
+                                  BorderThickness="1"
+                                  BorderBrush="Gray"
+                                  x:DataType="models:Disease"
+                                  Margin="0,-250,0,0"
+                                  Background="White"
+                                  MaxHeight="133">
+                                <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                </DataGrid.Columns>
+                        </DataGrid>
+                </TabItem>
+                
+                
+                
+                
+        </TabControl>
+        
+</Window>

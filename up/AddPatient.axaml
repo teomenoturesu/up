@@ -1,0 +1,25 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Height="320" Width="320"
+        x:Class="up.AddPatient"
+        Title="AddPatient">
+        <Grid>
+                <StackPanel Margin="10">
+                        <Label Content="Name:"/>
+                        <TextBox x:Name="NameTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Label Content="Surname:"/>
+                        <TextBox x:Name="SurnameTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Label Content="Date of Birth:"/>
+                        <DatePicker x:Name="DateOfBirthPicker" Width="300" Margin="0,0,0,10"/>
+
+                        <Label Content="Phone:"/>
+                        <TextBox x:Name="PhoneTextBox" Width="300" Margin="0,0,0,10"/>
+
+                        <Button Content="Add Patient" Click="Button_OnClick"/>
+                </StackPanel>
+        </Grid>
+</Window>

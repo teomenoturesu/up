@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="up/AddPatient.axaml" value="up/up.csproj" />
+        <entry key="up/AddPersonnel.axaml" value="up/up.csproj" />
+        <entry key="up/App.axaml" value="up/up.csproj" />
+        <entry key="up/Authorization.axaml" value="up/up.csproj" />
+        <entry key="up/MainWindow.axaml" value="up/up.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
