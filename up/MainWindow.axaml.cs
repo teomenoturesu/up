@@ -42,6 +42,7 @@ public partial class MainWindow : Window
         UpPatiens();
         UpPayments();
         UpTreatments();
+        CountPatientsTextBlock.Text = $"Количество пациентов: {Patients.Count}";
     }
 
     void UpAppointments()
